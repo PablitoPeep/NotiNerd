@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!--Bootstrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!--JQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--Bootsrap 5 min.-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <!--JavaScript-->
+  <script src="assets/js/weathermap.js"></script>
+  <script src="assets/js/fecha.js"></script>
+  <script src="assets/js/darkmode.js"></script>
+  <script src="assets/js/hora.js"></script>
+  <script src="assets/js/apirick.js"></script>
+  <script src="assets/js/valorant.js"></script>
+  <title>valorant</title>
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Noticias Nerds</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apirick.html">Rick And Morty</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="valorant.html">Valorant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <li class="nav-item">
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            onclick="darkMode(this.checked)">
+          <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+          <i class="fa fa-moon"></i>
+        </div>
+
+      </li>
+      <div class="navbar-text" id="current-time"></div>
+
+    </div>
+  </nav>
+
+  <script>
+    // Obtener la referencia al elemento que mostrará la hora actual
+    var currentTimeElement = document.getElementById("current-time");
+
+    // Función para actualizar la hora actual
+    function updateCurrentTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+
+      // Formatear la hora en formato HH:MM:SS
+      var formattedTime = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" +
+        seconds.toString().padStart(2, "0");
+
+      // Mostrar la hora actual en el elemento correspondiente
+      currentTimeElement.textContent = "Hora actual: " + formattedTime;
+    }
+
+    // Actualizar la hora actual cada segundo
+    setInterval(updateCurrentTime, 1000);
+
+    // Inicializar la hora actual al cargar la página
+    updateCurrentTime();
+  </script>
+<!-- contenido pagina-->
+
+  <!-- imagen fondo container rick-->
+  <style>
+    .container_valo {
+      background-image: url("assets/img/valoimagen.png");
+
+    }
+  </style>
+
+
+<h1 class="">Agentes Valorant</h1>
+  <div class="container_valo" id="agent-container">  ></div>
+  <h1>Armas</h1>
+  <div class="container_valo" id="weapon-container"> </div>
+  <h1>Mapas de Valorant</h1>
+  <div class="container_valo" id="map-container"></div>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white mt-5">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Dirección: Calle Principal, Ciudad, País</p>
+          <p>Teléfono: +1234567890</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Redes Sociales</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Aviso de Privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de Cookies</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Suscríbete</h5>
+          <p>Recibe las últimas noticias y actualizaciones.</p>
+          <form>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Correo electrónico" aria-label="Correo electrónico"
+                aria-describedby="subscribeBtn">
+              <button class="btn btn-primary" type="button" id="subscribeBtn">Suscribirse</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

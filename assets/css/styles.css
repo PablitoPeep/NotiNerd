@@ -1,0 +1,374 @@
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode .navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.form-control.success {
+  border-color: #28a745;
+}
+
+.form-control.error {
+  border-color: #dc3545;
+}
+
+.form-control.success:focus {
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.form-control.error:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.success+small,
+.form-control.error+small {
+  color: #dc3545;
+}
+
+.container_navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.container_index {
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-color: #636363;
+  text-transform: initial;
+  text-decoration: solid;
+
+}
+
+/* api rick */
+
+.container_rick {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto ;
+  padding: 50px;
+  border-radius: 1%;
+}
+
+.character-card,
+.episode-card {
+  width: 100%; 
+  border-radius: 50%;
+  background-color: #189c13;
+  border-radius: 5px;
+  padding: 10px; 
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  height: 200px;
+}
+
+.character-card img {
+   width: 150px; 
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  
+}
+
+.character-card h3,
+.episode-card h3 {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.titlerick {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+
+/* api valorant*/
+.container_valo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 75%;
+  border-radius: 1%;
+
+}
+
+.card {
+  width: 200px;
+  margin: 10px;
+  background-color: #834141;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(153, 19, 19, 0.3);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.agent-card {
+  width: 200px;
+  margin: 10px;
+  background-color: #b0db13;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(224, 17, 17, 0.3);
+}
+
+.agent-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.agent-card h3,
+.agent-card p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.weapon-card {
+  width: 200px;
+  margin: 10px;
+  background-color: #cccccc;
+  color: #0b22f0;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(175, 33, 33, 0.3);
+}
+
+.map-card {
+  width: 200px;
+  margin: 10px;
+  background-color: #b0db13;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(224, 17, 17, 0.3);
+
+}
+
+.weapon-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.weapon-card h3,
+.weapon-card p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+
+
+/*index*/
+.card-title {
+  text-align: start;
+text-align: center;
+
+}
+
+.card_title {
+  font-size: medium;
+}
+
+
+aside {
+  text-align: right;
+  margin: auto;
+  padding: 0%;
+}
+
+.cards {
+
+  text-align: center;
+  text-align: justify;
+  flex: content;
+  font-size: small;
+}
+
+
+/* FORMULARIO CSS*/
+.hidden {
+  display: none;
+}
+#resultado {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.form-group {
+margin-bottom: 15px;
+}
+
+.form-group label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+}
+
+.form-group input[type="submit"] {
+background-color: #4CAF50;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+#resultado {
+margin-top: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+}
+
+.error-message {
+color: red;
+font-size: 12px;
+}
+.containerformulario {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.containerformulario h1 {
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
+}
+.rut{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.nombre{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.apellido{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.fechanac{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.genero{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.domicilio{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.correo{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.usuario{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.contrasena{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.comentarios{
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
